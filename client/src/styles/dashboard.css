@@ -1,0 +1,33 @@
+.dashboard {
+  margin-left: 280px;
+  padding: 30px;
+  min-height: 100vh;
+  background: #f8fafc;
+}
+
+.dashboard-header {
+  margin-bottom: 35px;
+}
+
+.dashboard-title {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.dashboard-subtitle {
+  color: #64748b;
+  margin-top: 6px;
+}
+
+.dashboard-grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.stats-grid {
+  display: grid;
+  gap: 24px;
+  margin-top: 28px;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+}

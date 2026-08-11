@@ -1,0 +1,51 @@
+.card {
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 24px;
+  transition: 0.35s ease;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 24px 45px rgba(15, 23, 42, 0.15);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.card-body {
+  width: 100%;
+}
+
+.card-footer {
+  margin-top: 20px;
+}
+
+.weather-card {
+  background: linear-gradient(135deg, #2563eb, #0ea5e9);
+  color: white;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.analytics-card {
+  border-left: 5px solid #2563eb;
+}
+
+.hover-card:hover {
+  scale: 1.02;
+}

@@ -1,0 +1,40 @@
+.weather-banner {
+  border-radius: 26px;
+  padding: 35px;
+  color: white;
+  background: linear-gradient(135deg, #2563eb, #0ea5e9);
+}
+
+.weather-city {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.weather-temp {
+  font-size: 4rem;
+  font-weight: 800;
+  margin: 20px 0;
+}
+
+.weather-description {
+  opacity: 0.9;
+}
+
+.weather-grid {
+  display: grid;
+  gap: 20px;
+  margin-top: 35px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.weather-item {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 18px;
+  border-radius: 18px;
+  backdrop-filter: blur(15px);
+}
+
+.weather-icon {
+  width: 70px;
+  height: 70px;
+}

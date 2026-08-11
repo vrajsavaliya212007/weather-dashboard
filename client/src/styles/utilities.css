@@ -1,0 +1,111 @@
+.container-custom {
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.section-padding {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.grid-auto {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.shadow-custom {
+  box-shadow: var(--shadow);
+}
+
+.radius {
+  border-radius: var(--radius);
+}
+
+.transition {
+  transition: var(--transition);
+}
+
+.text-primary {
+  color: var(--primary);
+}
+
+.bg-primary {
+  background: var(--primary);
+}
+
+.bg-secondary {
+  background: var(--secondary);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.hidden-scroll {
+  overflow: hidden;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.rounded-full {
+  border-radius: 9999px;
+}
+
+.blur-bg {
+  backdrop-filter: blur(16px);
+}
+
+.opacity-80 {
+  opacity: 0.8;
+}
+
+.opacity-60 {
+  opacity: 0.6;
+}
+
+.opacity-40 {
+  opacity: 0.4;
+}
+
+.rotate-hover:hover {
+  transform: rotate(5deg);
+}
+
+.scale-hover:hover {
+  transform: scale(1.03);
+}
+
+.lift-hover:hover {
+  transform: translateY(-6px);
+}

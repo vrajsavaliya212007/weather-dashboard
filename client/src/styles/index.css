@@ -1,0 +1,102 @@
+@import "./variables.css";
+@import "./reset.css";
+@import "./typography.css";
+@import "./utilities.css";
+@import "./animations.css";
+@import "./scrollbar.css";
+@import "./glass.css";
+@import "./buttons.css";
+@import "./cards.css";
+@import "./forms.css";
+@import "./sidebar.css";
+@import "./navbar.css";
+@import "./dashboard.css";
+@import "./weather.css";
+@import "./loader.css";
+/* @import "./responsive.css"; */
+/* @import "./themes.css"; */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html.dark {
+  background: #0f172a;
+}
+
+html.dark body {
+  background: #0f172a;
+  color: #f8fafc;
+}
+
+html.dark .bg-white {
+  background-color: #1e293b !important;
+}
+
+html.dark .text-slate-900 {
+  color: #f8fafc !important;
+}
+
+html.dark .text-slate-800 {
+  color: #f1f5f9 !important;
+}
+
+html.dark .text-slate-700 {
+  color: #e2e8f0 !important;
+}
+
+html.dark .text-slate-600 {
+  color: #cbd5e1 !important;
+}
+
+html.dark .text-slate-500 {
+  color: #94a3b8 !important;
+}
+
+html.dark .border-slate-200 {
+  border-color: #334155 !important;
+}
+
+html.dark .border-slate-300 {
+  border-color: #475569 !important;
+}
+
+html.dark input,
+html.dark select,
+html.dark textarea {
+  background-color: #1e293b;
+  color: #f8fafc;
+  border-color: #475569;
+}
+
+html.dark input::placeholder,
+html.dark textarea::placeholder {
+  color: #94a3b8;
+}
+
+/* ========================================
+   GLOBAL SCROLLBAR HIDDEN
+   Page scrolling will still work
+======================================== */
+
+html {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+body {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
