@@ -14,7 +14,7 @@ export const generateAccessToken = (userId) => {
 
 export const sendToken = (user, statusCode, message, res) => {
   const token = generateAccessToken(user._id);
-  const isProduction = process.env.NODE_ENV === "production";
+
   const safeUser = user.toObject ? user.toObject() : { ...user };
 
   delete safeUser.password;
@@ -23,8 +23,8 @@ export const sendToken = (user, statusCode, message, res) => {
     .status(statusCode)
     .cookie("token", token, {
       httpOnly: true,
-      secure: isProduction,
-      sameSite: isProduction ? "none" : "lax",
+      secure: true,
+      sameSite: "none",
       maxAge: 24 * 60 * 60 * 1000,
       path: "/",
     })
