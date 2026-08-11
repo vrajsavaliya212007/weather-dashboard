@@ -7,15 +7,13 @@ export const generateAccessToken = (userId) => {
     },
     process.env.JWT_SECRET,
     {
-      expiresIn: "1d",
+      expiresIn: process.env.JWT_EXPIRE || "1d",
     },
   );
 };
 
 export const sendToken = (user, statusCode, message, res) => {
   const token = generateAccessToken(user._id);
-
-  const isProduction = process.env.NODE_ENV === "production";
 
   const safeUser = user.toObject ? user.toObject() : { ...user };
 
@@ -25,8 +23,8 @@ export const sendToken = (user, statusCode, message, res) => {
     .status(statusCode)
     .cookie("token", token, {
       httpOnly: true,
-      secure: isProduction,
-      sameSite: isProduction ? "none" : "lax",
+      secure: process.env.NODE_ENV === "production",
+      sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
       maxAge: 24 * 60 * 60 * 1000,
       path: "/",
     })
@@ -34,5 +32,6 @@ export const sendToken = (user, statusCode, message, res) => {
       success: true,
       message,
       user: safeUser,
+      token,
     });
 };

@@ -25,6 +25,10 @@ export const AuthProvider = ({ children }) => {
   const login = async (data) => {
     try {
       const response = await api.post("/auth/login", data);
+      const token = response.data?.token;
+      if (token) {
+        localStorage.setItem("skycast_token", token);
+      }
       setUser(response.data?.user || null);
       return response.data;
     } catch (error) {
@@ -35,6 +39,10 @@ export const AuthProvider = ({ children }) => {
   const register = async (data) => {
     try {
       const response = await api.post("/auth/register", data);
+      const token = response.data?.token;
+      if (token) {
+        localStorage.setItem("skycast_token", token);
+      }
       setUser(response.data?.user || null);
       return response.data;
     } catch (error) {
@@ -45,9 +53,11 @@ export const AuthProvider = ({ children }) => {
   const logout = async () => {
     try {
       const response = await api.post("/auth/logout");
+      localStorage.removeItem("skycast_token");
       setUser(null);
       return response.data;
     } catch (error) {
+      localStorage.removeItem("skycast_token");
       setUser(null);
       throw error;
     }
