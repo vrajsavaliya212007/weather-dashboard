@@ -3,7 +3,7 @@ import AuthLayout from "../layouts/AuthLayout";
 import Layout from "../components/layout/Layout";
 import ProtectedRoute from "../routes/ProtectedRoute";
 import AdminRoute from "../components/auth/AdminRoute";
-import Dashboard from "../pages/dashboard/Dashboard";
+import Dashboard from "../pages/Dashboard/Dashboard";
 import Login from "../pages/auth/Login";
 import Register from "../pages/auth/Register";
 import Favorites from "../pages/favorites/Favorites";
