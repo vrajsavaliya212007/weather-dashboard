@@ -1,21 +1,25 @@
 import { Navigate, Route, Routes } from "react-router-dom";
+
 import AuthLayout from "../layouts/AuthLayout";
 import Layout from "../components/layout/Layout";
+
 import ProtectedRoute from "../routes/ProtectedRoute";
 import AdminRoute from "../components/auth/AdminRoute";
+
 import Dashboard from "../pages/Dashboard/Dashboard";
+import Favorites from "../pages/Favorites/Favorites";
+import Notifications from "../pages/Notifications/Notifications";
+import Analytics from "../pages/Analytics/Analytics";
+import Weather from "../pages/Weather/Weather";
+import Profile from "../pages/Profile/Profile";
+import Admin from "../pages/Admin/Admin";
+import Search from "../pages/Search/Search";
+import Settings from "../pages/Settings/Settings";
+import News from "../pages/News/News";
+
 import Login from "../pages/auth/Login";
 import Register from "../pages/auth/Register";
-import Favorites from "../pages/favorites/Favorites";
-import Notifications from "../pages/notifications/Notifications";
-import Analytics from "../pages/analytics/Analytics";
-import Weather from "../pages/weather/Weather";
-import Profile from "../pages/profile/Profile";
-import Admin from "../pages/Admin/Admin";
-import Search from "../pages/search/Search";
-import Settings from "../pages/settings/Settings";
 import ForgotPassword from "../pages/auth/ForgotPassword";
-import News from "../pages/news/News";
 import ResetPassword from "../pages/auth/ResetPassword";
 
 function AppRoutes() {
@@ -27,7 +31,6 @@ function AppRoutes() {
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/reset-password/:token" element={<ResetPassword />} />
       </Route>
-
       <Route element={<ProtectedRoute />}>
         <Route element={<Layout />}>
           <Route path="/dashboard" element={<Dashboard />} />
@@ -44,7 +47,6 @@ function AppRoutes() {
           </Route>
         </Route>
       </Route>
-
       <Route path="/" element={<Navigate to="/dashboard" replace />} />
       <Route path="*" element={<Navigate to="/dashboard" replace />} />
     </Routes>
